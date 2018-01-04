@@ -1,0 +1,410 @@
+body {
+  height:auto;
+  width:100%;
+  font-family:  'Myriad Pro Regular', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+@font-face {
+font-family:'Myriad Pro Regular';
+src: url('MyriadPro-Regular.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */
+nav {
+  height:98px;
+  padding: 0px;
+}
+
+nav ul {
+  height:98px;
+  float: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  float: center;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 150px;
+}
+
+nav ul li a {
+  display: inline-block;
+  outline: none;
+  color: #1f2227;
+  font-size: 18px;
+  font-style: italic;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+nav ul li a:hover {
+  color: #808080;
+  text-decoration: none;
+}
+
+/* Mediaqueries Tablette pour le menu */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  nav ul li:not(:first-child) {
+    margin-left: 30px;
+  }
+    
+  nav ul li a {
+    font-size: 1em;
+    letter-spacing: 0em;
+  }
+}
+
+/* Mediaqueries Smartphone pour le menu */
+@media screen and (max-width: 767px) {
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #1f2227;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+    
+  .nav-container ul {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+    
+  .nav-container ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+    
+  .nav-container ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+    
+  .nav-container ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+    
+  .nav-container ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+    
+  .nav-container ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+    
+  .nav-container ul li:not(:first-child) {
+    margin-left: 0;
+  }
+    
+  .nav-container ul li a {
+    padding: 10px 25px;
+    opacity: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    transform: translateY(-20px);
+    transition: all 0.2s ease;
+  }
+    
+  .nav-open {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+    
+  .nav-open i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #1f2227;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+    
+  .nav-open i:nth-child(1) {
+    margin-top: 16px;
+  }
+    
+  .nav-open i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+    
+  .nav-open i:nth-child(3) {
+    margin-top: 4px;
+  }
+}
+
+#nav:checked + .nav-open {
+  transform: rotate(45deg);
+}
+
+#nav:checked + .nav-open i {
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+  opacity: 0;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .nav-container ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+/* LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES LIGNES */
+#line1{
+width: 880px;
+height: 20px;
+border-bottom: 1px solid black;
+position: absolute;
+left:0;
+}
+
+#line2{
+margin-left: 1200px;
+width: 940px;
+height: 20px;
+border-bottom: 1px solid black;
+position: absolute;
+right:0%;
+}
+
+/* Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel Carousel */
+@keyframes slidy {
+  0% {left: 0%;}
+  20% {left: 0%;}
+  25% {left: -100%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {left: -200%;}
+  75% {left: -300%;}
+  95% {left: -300%;}
+  100% {left: -300%;}
+}
+
+div#slider {
+  overflow: hidden;
+}
+
+div#slider figure img {
+  width: 25%;
+  float: left;
+}
+
+div#slider figure {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
+/* Footer   
+================================================== */
+.row03 {
+position: relative;
+height: auto;
+width: 100%;
+text-align: center;
+}
+
+#footer {
+margin:0;
+width: 100%;
+}
+
+/* Pages Prives.php Traiteur.php Reception.php
+================================================== */
+div.container { margin: 0 auto; overflow:hidden; width:95%; } 
+div div div { float:left; margin:0 2% 0 0; overflow:hidden; }
+div div div:last-child { margin-right:0; }
+div div.row04 div { width:32%;}
+
+#left, #middle, #right {
+height:840px;
+text-align: center;    
+}
+
+#img1, #img3, #img4 {
+height:50%;width: 100%;
+}
+#img2 {
+height:100%;width: 100%;
+}
+
+/* Mediaqueries Tablette pour les pages  Prives.php Traiteur.php Reception.php */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    div div.row04 div { width:48%; }
+    
+    #right {
+     display: flex;
+     flex-direction:row;
+     justify-content: space-around;
+     margin-top: 1%;
+     width:98%;height:auto;
+    }
+    
+    #img3, #img4 {
+    height:50%;width: 49%;
+    }
+}
+
+/* Mediaqueries Smartphone pour les pages  Prives.php Traiteur.php Reception.php */
+@media screen and (max-width: 767px) {
+    div div.row04 div { width:100%; }
+    
+    #img2, #img3 {
+    margin-top: 5%;
+    }
+}
+
+/* Page References.php  
+================================================== */
+div.container2 { margin: 0 15% 0 25%; overflow:hidden; width:70%; } 
+div div.row05 div { width:100%;height:280px;}
+div div.row06 div { width:100%;height:280px;}
+div div.row07 div { width:100%;height:280px;}
+
+.row05 img, .row06 img, .row07 img{
+width: 15%;
+}
+
+#img6 {
+width:27%;
+}
+
+#img11, #img12 {
+width: 22%;
+}
+
+/* Mediaqueries Tablette pour la page References.php */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    div div.row05 div { width:100%;height:auto;}
+    div div.row06 div { width:100%;height:auto;}
+    div div.row07 div { width:100%;height:auto;}
+}
+
+/* Mediaqueries Smartphone pour la page References.php */
+@media screen and (max-width: 767px) {
+    div div.row05 div { width:100%;height:auto;}
+    div div.row06 div { width:100%;height:auto;}
+    div div.row07 div { width:100%;height:auto;}
+}
+
+/* Page Contact.php  
+================================================== */
+div div.row08 div { width:49%;height:840px;}
+
+#left3, #right3 {
+text-align: center;    
+}
+
+#blueberry {
+width:70%;
+height:auto;
+}
+
+#right3 form, #right3 h1 {
+padding-top: 8%;
+}
+
+#right3 input {
+width:450px;
+height:3em;    
+}
+
+#right3 textarea {
+width:600px;
+height:12em;
+}
+
+#right3 button {
+margin-left:70%;
+color:white;
+background-color:black;
+border-radius: 10px;
+}
+
+/* Mediaqueries Tablette pour la page Contact.php */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #left3, #right3 {
+        height: auto;}
+}
+
+/* Mediaqueries Smartphone pour la page Contact.php */
+@media screen and (max-width: 767px) {
+    div div.row08 div { width:100%;height:auto;}
+}
+
+/* Page Devis.php  
+================================================== */
+div div.row009 div {width:100%;}
+div div.row09 div {width:32%;height:640px;}
+
+.row09 input {
+display: block;
+width: 100px;
+float: right;
+}
+
+.row09 fieldset {
+border:2px solid orange;
+}
+
+.row09 button {
+width: 250px;
+float:right;
+}
+
+/* Mediaqueries Tablette pour la page Devis.php */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    div div.row09 div {width:100%;height:auto;}
+}
+
+/* Mediaqueries Smartphone pour la page Devis.php */
+@media screen and (max-width: 767px) {
+    div div.row09 div {width:100%;height:auto;}
+}
