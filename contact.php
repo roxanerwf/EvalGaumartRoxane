@@ -19,7 +19,7 @@
     <body>
 
 
-   <!-- MENU NAVIGATION -->
+   <!-- MENU NAVIGATION ---->
       <nav class="row01">
        <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
