@@ -107,7 +107,7 @@
 
 <script type="text/javascript">
    function Message() {
-       var msg="Message envoyer";
+       var msg="Message envoyé";
        console.log(msg)
        alert(msg);
    }
