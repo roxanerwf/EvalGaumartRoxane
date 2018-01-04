@@ -1,9 +1,3 @@
-<?php
-function connectMaBase(){
-    $base = mysql_connect ('localhost', 'root', '');
-    mysql_select_db ('eval1', $base);
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -13,11 +7,11 @@ function connectMaBase(){
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    
+
     <body>
-     
-      
-   <!-- MENU NAVIGATION -->      
+
+
+   <!-- MENU NAVIGATION -->
       <nav class="row01">
        <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
@@ -35,8 +29,8 @@ function connectMaBase(){
           </ul>
          </div>
         </nav>
-     
-    <!-- CONTENU --> 
+
+    <!-- CONTENU -->
      <div class="container">
       <div class="row08" id="">
        <div id="left3">
@@ -47,58 +41,69 @@ function connectMaBase(){
            <br />
           Email : <span style="color:orange;">gaumart75@orange.fr</span></p><br />
            <br />
-                 
+
           <img src="img/dessert-2696759_1920.jpg" class="img-responsive" id="blueberry"><!--style="width:70%; margin-left:-10em;"-->
-       </div>                
- 
-         
+       </div>
+
+
        <div id="right3" >
          <h1>Formulaire de contact</h1>
-            <form name="contact" method="post" action="contact.php" >
-       
-             <input type="text" name="nom" placeholder="NOM" />  
+            <form name="contact" method="POST" action="contact.php" >
+
+             <input type="text" name="nom" placeholder="NOM" />
                <br/><br/>
-             <input type="text" name="societe"  placeholder="SOCIETE*" /> 
+             <input type="text" name="societe"  placeholder="SOCIETE*" />
               <br/><br/>
-             <input type="text" name="email"  placeholder="EMAIL*" /> 
+             <input type="text" name="email"  placeholder="EMAIL*" />
               <br/><br/>
              <input type="text" name="tel"  placeholder="TEL" />
               <br/><br/>
              <textarea id="message" name="message" placeholder="MESSAGE *" ></textarea>
               <br/><br/>
-              
+
              <button type="submit" name="valider" >Envoyer </button>
             </form>
       </div>
 
      </div>
     </div> <!-- Fermeture div container -->
-        
-    <!-- FOOTER --> 
+
+    <!-- FOOTER -->
      <div class="row03">
       <div id="footer">
-        <h1>- GAUMART Traiteur Paris -</h1> 
+        <h1>- GAUMART Traiteur Paris -</h1>
         <h4 style="font-style:italic;">Mentions légales / Getartproject © 2015</h4>
       </div>
      </div>
-        
+     <?php
+                 $Nom = $_POST['nom'];
+                 $Societe = $_POST['societe'];
+                 $Email = $_POST['email'];
+                 $Tel = $_POST['tel'];
+                 $Message = $_POST['message'];
+             try {
+     $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+
+     $bdd=new PDO('mysql:host=localhost;dbname=traiteur_gaumart','root','',$pdo_options);
+
+     }
+     catch(Exception $e)
+     {
+     die('Erreur : '.$e->getMessage());
+     }
+         try
+         {
+                 $req = $bdd->prepare("INSERT INTO contacts (nom, societe, email, tel, message) VALUES(:Nom, :Societe, :Email, :Tel, :Message)");
+         $req->execute(array("Nom" => $_POST['nom'], "Societe" => $_POST['societe'], "Email" => $_POST['email'], "Tel" => $_POST['tel'], "Message" => $_POST['message']));
+             }
+
+     catch(Exception $e)
+     {
+     die('Erreur : '.$e->getMessage());
+
+     }
+     ?>
+
+
   </body>
 </html>
-
-<?php
-if (isset ($_POST['valider'])) {
-$Nom=$_POST['nom'];
-$Societe=$_POST['societe'];
-$Email=$_POST['email'];
-$Tel=$_POST['tel'];
-$Message=$_POST['message'];
-
-connectMaBase();
-
-$sql = 'INSERT INTO Contacts VALUES(NULL,"'.$Nom.'","'.$Societe.'","'.$Email.'","'.$Tel.'","'.$Message.'")';
-
-mysql_query($sql) or die ('Erreur SQL !'.$sql.'<br/>'.mysql_error()) ;
-
-mysql_close() ;
-}
-?>
