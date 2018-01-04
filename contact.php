@@ -54,9 +54,13 @@
        </div>
 
 
+
+
+
+
        <div id="right3" >
          <h1>Formulaire de contact</h1>
-            <form name="contact" method="post" action="contact.php" >
+            <form name="contact" method="post" action="contact.php">
 
              <input type="text" name="nom" placeholder="NOM" />
                <br/><br/>
@@ -69,9 +73,11 @@
              <textarea id="message" name="msg" placeholder="MESSAGE *" ></textarea>
               <br/><br/>
 
-             <button type="submit" name="valider" >Envoyer </button>
+             <button type="submit" name="valider" onclick="Message()">Envoyer </button>
             </form>
       </div>
+
+
       <?php
           if (isset ($_POST['valider'])) {
               $nom=$_POST['nom'];
@@ -86,29 +92,7 @@
      </div>
     </div> <!-- Fermeture div container -->
 
-    		<?php
-    			function connectgaumart(){
-    			$base = mysql_connect('localhost', 'root', '');
-    			mysql_select_db('gaumart', $base);
-    			}
-    		?>
-    		<?php
-    			if (isset($_POST['valider'])) {
 
-
-    				$nom=$_POST['nom'];
-    				$societe=$_POST['societe'];
-    				$adresse=$_POST['adresse'];
-    				$tel=$_POST['tel'];
-    				$email=$_POST['email'];
-    				$message=$_POST['message'];
-
-    				connectgaumart();
-    				$sql = 'INSERT INTO contact VALUES("","'.$nom.'","'.$societe.'","'.$adresse.'","'.$tel.'","'.$email.'","'.$message.'")';
-    				mysql_query($sql) or die ('Erreur SQL !'.$sql.'<br />'.mysql_error());
-    				mysql_close();
-    			}
-    		?>
 
     <!-- FOOTER -->
      <div class="row03">
@@ -120,3 +104,11 @@
 
   </body>
 </html>
+
+<script type="text/javascript">
+   function Message() {
+       var msg="Message envoyer";
+       console.log(msg)
+       alert(msg);
+   }
+</script>
