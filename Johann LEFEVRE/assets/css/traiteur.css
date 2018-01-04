@@ -1,0 +1,537 @@
+body {
+    margin-right: 0;
+    padding: 0;
+}
+
+/*--------------------------NAV--------------------------*/
+
+header {
+    font-size: 20px;
+    font-family: Myriad Pro Regular;
+    color: #000;
+    font-style: italic;
+    margin-top: 1%;
+
+}
+
+
+#logo {
+    width: 70%;
+    height: auto;
+    margin-top: -17%;
+
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 47%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.navbar > .container .navbar-brand-centered,
+.navbar > .container-fluid .navbar-brand-centered {
+    margin-left: -70px;
+}
+
+#trait1 {
+    width: 45%;
+    height: 1px;
+    background-color: black;
+    margin-top: -1em;
+
+}
+
+#trait2 {
+    width: 44%;
+    height: 1px;
+    background-color: black;
+    margin-left: 56%;
+
+}
+
+#ligne1 {
+    font-family: Myriad Pro Bold;
+    font-size: 30px;
+}
+
+#ligne2 {
+    font-family: Myriad Pro Regular;
+    font-size: 20px;
+}
+
+nav {
+    background-color: white !important;
+    border: none !important;
+}
+
+
+
+
+
+
+/*--------------------------MEDIA QUERIES NAV--------------------------*/
+
+@media screen and (max-width: 680px) {
+    #ligne1 {
+        font-family: Myriad Pro Bold;
+        font-size: 15px;
+    }
+
+    #ligne2 {
+        font-family: Myriad Pro Regular;
+        font-size: 15px;
+    }
+    #logo {
+        width: 50%;
+    }
+    li {
+        margin-left: 17%;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    #ligne1 {
+        font-family: Myriad Pro Bold;
+        font-size: 15px;
+    }
+
+    #ligne2 {
+        font-family: Myriad Pro Regular;
+        font-size: 15px;
+    }
+    #logo {
+        width: 64%;
+        margin-left: -70%
+    }
+    li {
+        font-size: 70%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+    #ligne1 {
+        font-family: Myriad Pro Bold;
+        font-size: 15px;
+    }
+
+    #ligne2 {
+        font-family: Myriad Pro Regular;
+        font-size: 15px;
+    }
+    #logo {
+        width: 70%;
+        margin-left: -45%;
+    }
+    li {
+        font-size: 100%;
+        margin-left: -2%;
+    }
+}
+
+
+/*--------------------------TRAITEUR--------------------------*/
+
+#textegauche {
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 5%;
+}
+
+#textestyle {
+    font-family: Myriad Pro Regular;
+    font-size: 24px;
+
+}
+
+h3 {
+    font-family: Myriad Pro Bold;
+    font-size: 36px;
+}
+
+#img1 {
+    float: left;
+    margin-top: 18%;
+    margin-left: -29%;
+}
+
+#img2 {
+    margin-top: 4%;
+    margin-left: 41%;
+    width: 30em;
+
+}
+
+#img3 {
+    float: right;
+    margin-top: -15.8%;
+    margin-right: 7%;
+}
+
+#img4 {
+    float: right;
+    margin-top: -33.3%;
+    margin-right: 7%;
+}
+
+/*--------------------------MEDIA QUERIES TRAITEUR--------------------------*/
+
+@media screen and (max-width: 360px) {
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 9.5%;
+        width: 80%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 9.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -20%;
+        margin-left: 18%;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 412px) {
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 9.5%;
+        width: 80%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 9.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -20%;
+        margin-left: 18%;
+    }
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 9.5%;
+        width: 80%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 9.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -20%;
+        margin-left: 18%;
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 9.5%;
+        width: 80%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 9.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -20%;
+        margin-left: 18%;
+    }
+
+}
+
+
+@media screen and (max-width: 414px) {
+
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 10.5%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 9.5%;
+        width: 80%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 9.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -20%;
+        margin-left: 18%;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 22%;
+        margin-bottom: 2%;
+        width: 55%;
+
+    }
+
+    #img2 {
+        margin-left: 22%;
+        margin-bottom: 2%;
+        width: 100%;
+        float: left
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: 5%;
+        width: 75%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: 0%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -8%;
+        margin-left: 33%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+
+
+    #textegauche {
+        margin-left: 36%;
+    }
+
+    #textegauche p {
+        font-size: 1.3em;
+        margin-bottom: 30%;
+    }
+
+    #img1 {
+        margin-top: 1%;
+        margin-left: 23%;
+        margin-bottom: 2%;
+        width: 80%;
+
+    }
+
+    #img2 {
+        margin-left: 30%;
+        margin-bottom: 2%;
+        width: 80%;
+
+
+    }
+
+    #img3 {
+        margin-top: 0%;
+        margin-right: -3.5%;
+        width: 75%;
+
+    }
+    #img4 {
+        margin-top: 3%;
+        width: 80%;
+        margin-right: -8.5%;
+
+    }
+    footer {
+        float: left;
+        margin-top: -8%;
+        margin-left: 38%;
+    }
+
+}
+
+/*--------------------------FOOTER--------------------------*/
+
+footer .footertext1 p {
+    font-size: 1.5em;
+    text-align: center;
+    font-style: italic;
+    margin-top: 5em;
+    font-family: Myriad Pro Regular;
+}
+
+footer .footertext2 p {
+    margin-top: -0.6%;
+    text-align: center;
+    font-family: Myriad Pro Regular;
+}
